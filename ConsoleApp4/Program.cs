@@ -15,6 +15,7 @@ namespace ConsoleApp4
             {
                 MenuOpcao();
 
+
                 Console.WriteLine("Deseja continuar ?");
                 Console.WriteLine("Digite 0 para continuar");
                 menuOpcao = int.Parse(Console.ReadLine());
