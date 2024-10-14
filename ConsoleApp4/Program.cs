@@ -10,24 +10,26 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            int menuOpcao = 0;
+            string menuOpcao;
             do 
             {
                 MenuOpcao();
 
 
                 Console.WriteLine("Deseja continuar ?");
-                Console.WriteLine("Digite 0 para continuar");
-                menuOpcao = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite Sim para continuar");
+                menuOpcao = Console.ReadLine();
                 Console.Clear();
             } 
-            while (menuOpcao == 0);
+            while (menuOpcao == "Sim");
         }
 
         private static void MenuOpcao()
         {
             Lista1 lista1 = new Lista1();
             Lista2 lista2 = new Lista2();
+            Lista3 lista3 = new Lista3();
+            Lista4 lista4 = new Lista4();
 
             int escolha = 0;
 
@@ -176,6 +178,100 @@ namespace ConsoleApp4
                     }
                     break;
 
+                case 3:
+                    int escolhaLista03 = 0;
+
+                    Console.Clear ();
+                    Console.WriteLine("Digite o exercício desejado: \n");
+                    Console.WriteLine("1 - Faça um programa que receba 3 valores e retorne a soma deles.\n");
+                    Console.WriteLine("2 - Faça um programa que receba quatro notas e retorne a média.\n");
+                    Console.WriteLine("3 - Faça um programa que receba um nome enquanto o nome for diferente de João continuar pedindo o nome.\n");
+                    Console.WriteLine("4 - Faça um programa que retorne à quantidade de números pares existente entre 35 e 98111.\n");
+                    Console.WriteLine("5 - FaÇa um programa que some todos os números ímpares de 1 até 5000.\n");
+                    Console.WriteLine("6 - Faça um programa que receba um número e usando laços de repetição calcule e mostre a tabuada desse número.\n");
+                    escolhaLista03 = int.Parse(Console.ReadLine());
+                    Console.Clear();
+
+                    switch (escolhaLista03) 
+                    {
+                        case 1:
+                            lista3.Exercicio01();
+                            break;
+                        case 2:
+                            lista3.Exercicio02();
+                            break;
+                        case 3:
+                            lista3.Exercicio03();
+                            break;
+                        case 4:
+                            lista3.Exercicio04();
+                            break;
+                        case 5:
+                            lista3.Exercicio05();
+                            break;
+                        case 6:
+                            lista3.Exercicio06();
+                            break;
+                        default:
+                            Console.WriteLine("Tente novamente");
+                            break;
+                    }
+                    break;
+                case 4:
+                    int escolhaLista04 = 0;
+
+                    Console.Clear ();
+                    Console.WriteLine("Digite o exercício desejado: \n");
+                    Console.WriteLine("1 - Verificação de Número Par ou Ímpar: \n");
+                    Console.WriteLine("2 - Classificação de Idade: \n");
+                    Console.WriteLine("3 - Verificação de Notas: \n");
+                    Console.WriteLine("4 - Cálculo de IMC: \n");
+                    Console.WriteLine("5 - Maior de Dois Números: \n");
+                    Console.WriteLine("6 - Verificação de Voto: \n");
+                    Console.WriteLine("7 - Cálculo de Desconto: \n");
+                    Console.WriteLine("8 - Classificação de Temperatura: \n");
+                    Console.WriteLine("9 - Cálculo de Média de Três Números: \n");
+                    Console.WriteLine("10 - Verificação de Ano Bissexto: \n");
+                    escolhaLista04 = int.Parse(Console.ReadLine());
+                    Console.Clear();
+
+                    switch (escolhaLista04) 
+                    {
+                        case 1:
+                            lista4.Exercicio01();
+                        break;
+                        case 2:
+                            lista4.Exercicio02();
+                        break;
+                        case 3:
+                            lista4.Exercicio03();
+                        break;
+                        case 4:
+                            lista4.Exercicio04();
+                        break;
+                        case 5:
+                            lista4.Exercicio05();
+                        break;
+                        case 6:
+                            lista4.Exercicio06();
+                        break;
+                        case 7:
+                            lista4.Exercicio07();
+                        break;
+                        case 8:
+                            lista4.Exercicio08();
+                        break;
+                        case 9:
+                            lista4.Exercicio09();
+                        break;
+                        case 10:
+                            lista4.Exercicio10();
+                        break;
+                        default:
+                            Console.WriteLine("Tente novamente");
+                        break;
+                    }
+                    break;
                 default:
                     Console.WriteLine("Tente novamente");
                     break;

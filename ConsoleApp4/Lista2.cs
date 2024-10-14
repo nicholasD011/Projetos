@@ -170,26 +170,156 @@ namespace ConsoleApp4
 
         internal void Exercicio09()
         {
-            int valor1, valor2, valor3;
+            int valor1,valor2,valor3;
+            int maior, meio, menor;
 
-            Console.WriteLine("Informe o primeiro valor: ");
+            Console.Write("Digite o primeiro valor: ");
             valor1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Informe o segundo valor: ");
+            Console.Write("Digite o segundo valor: ");
             valor2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Informe o terceiro valor: ");
+            Console.Write("Digite o terceiro valor: ");
             valor3 = int.Parse(Console.ReadLine());
 
-
+            if (valor1 >= valor2 && valor1 >= valor3) 
+            {
+                maior = valor1;
+                if (valor2 >= valor3)
+                {
+                    meio = valor2;
+                    menor = valor3;
+                }
+                else
+                {
+                    meio = valor3;
+                    menor = valor2;
+                }
+            }
+            else if (valor2 >= valor1 && valor2 >= valor3) 
+            {
+                maior = valor2;
+                if (valor1 >= valor3)
+                {
+                    meio = valor1;
+                    menor = valor3;
+                }
+                else 
+                {
+                    meio = valor3;
+                    menor = valor1;
+                }
+            }
+            else 
+            {
+                maior = valor3;
+                if (valor1 >= valor2) 
+                {
+                    meio = valor1;
+                    menor = valor2;
+                }
+                else 
+                {
+                    meio = valor2;
+                    menor = valor1;
+                }
+            }
+            Console.WriteLine($"Valores ordenados: {maior},{meio},{menor}");
+            Console.ReadLine();
         }
 
         internal void Exercicio10()
         {
-            throw new NotImplementedException();
+            int valor1, valor2, valor3;
+            int maior, meio, menor;
+
+            Console.Write("Digite o primeiro valor: ");
+            valor1 = int.Parse(Console.ReadLine());
+            Console.Write("Digite o segundo valor: ");
+            valor2 = int.Parse(Console.ReadLine());
+            Console.Write("Digite o terceiro valor: ");
+            valor3 = int.Parse(Console.ReadLine());
+
+            if (valor1 <= valor2 && valor1 <= valor3)
+            {
+                menor = valor1;
+                if (valor2 <= valor3)
+                {
+                    meio = valor2;
+                    maior = valor3;
+                }
+                else
+                {
+                    meio = valor3;
+                    maior = valor2;
+                }
+            }
+            else if (valor2 <= valor1 && valor2 <= valor3)
+            {
+                menor = valor2;
+                if (valor1 <= valor3)
+                {
+                    meio = valor1;
+                    maior = valor3;
+                }
+                else
+                {
+                    meio = valor3;
+                    maior = valor1;
+                }
+            }
+            else
+            {
+                menor = valor3;
+                if (valor1 <= valor2)
+                {
+                    meio = valor1;
+                    maior = valor2;
+                }
+                else
+                {
+                    meio = valor2;
+                    maior = valor1;
+                }
+            }
+            Console.WriteLine($"Valores ordenados: {menor},{meio},{maior}");
+            Console.ReadLine();
         }
 
         internal void Exercicio11()
         {
-            throw new NotImplementedException();
+            int horaInicio, horaFim, duracao, horasRestantes, horasExcedentes;
+            int maximaDuracao = 24;
+
+            Console.Write("Digite a hora de início do jogo (0-23): ");
+            horaInicio = int.Parse( Console.ReadLine() );
+            Console.Write("Digite a hora do término de jogo (0-23): ");
+            horaFim = int.Parse( Console.ReadLine() );
+
+            if (horaFim >= horaInicio)
+            {
+                duracao = horaFim - horaInicio;
+            }
+            else 
+            {
+                duracao = (24 - horaInicio)+horaFim;
+            }
+
+            Console.WriteLine($"O jogo durou {duracao} horas.");
+
+            if (duracao < maximaDuracao)
+            {
+                horasRestantes = maximaDuracao - duracao;
+                Console.WriteLine($"Restam {horasRestantes} horas para atingir o tempo máximo de 24 horas");
+            }
+            else if (duracao > maximaDuracao)
+            {
+                horasExcedentes = duracao - maximaDuracao;
+                Console.WriteLine($"O jogo excedeu o tempo máximo de 24 horas em {horasExcedentes} horas.");
+            }
+            else 
+            {
+                Console.WriteLine("O jogo durou exatamente 24 horas.");
+            }
+            Console.ReadLine();
         }
     }
 }
