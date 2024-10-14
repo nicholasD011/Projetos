@@ -186,17 +186,69 @@ namespace ConsoleApp4
 
         internal void Exercicio08()
         {
-            throw new NotImplementedException();
+            double grausCelcius = 0;
+
+            Console.Write("Informe a temperatura em Graus Celcius: ");
+            grausCelcius = double.Parse(Console.ReadLine());
+
+            if (grausCelcius > 25 ) 
+            {
+                Console.WriteLine("Quente");
+                Console.ReadLine();
+            }
+            else if (grausCelcius >= 15) 
+            {
+                Console.WriteLine("Agradável");
+                Console.ReadLine();
+            }
+            else 
+            {
+                Console.WriteLine("Frio");
+                Console.ReadLine();
+            }
         }
 
         internal void Exercicio09()
         {
-            throw new NotImplementedException();
+            int num1, num2, num3, media;
+
+            Console.Write("Informe o primeiro número: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.Write("Informe o segundo número: ");
+            num2 = int.Parse(Console.ReadLine());
+            Console.Write("Informe o terceiro número: ");
+            num3 = int.Parse(Console.ReadLine());
+
+            media = (num1 + num2 + num3)/3;
+
+            if (media > 7)
+            {
+                Console.WriteLine("Aprovado");
+                Console.ReadLine();
+            }
+            else 
+            {
+                Console.WriteLine("Reprovado");
+                Console.ReadLine();
+            }
         }
 
         internal void Exercicio10()
         {
-            throw new NotImplementedException();
+            int ano;
+
+            Console.Write("O ano informado é bissexto: ");
+            ano = int.Parse(Console.ReadLine());
+
+            if (ano % 4 == 0) 
+            {
+                Console.WriteLine("Estamos em um ano bissexto!!!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Este ano não é bissexto :(");
+            }
         }
     }
 }
